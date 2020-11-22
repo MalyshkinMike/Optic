@@ -60,6 +60,7 @@ if __name__ == '__main__':
         F.append(F_temp)
     '''
     x_i, ksi_i = np.meshgrid(x, ksi)
+
     A = core(alpha, x_i, ksi_i)
     fs = f(x, b)
     F = A.dot(fs)*hx
